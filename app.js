@@ -120,6 +120,7 @@ app.configure('production', function(){
 
 // Routes
 app.get('/', routes.index);
+app.get('/trends', routes.index);
 app.get('/partials/:name', routes.partials);
 
 // JSON API

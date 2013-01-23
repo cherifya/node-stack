@@ -53,6 +53,10 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives'])
       templateUrl: 'partials/index',
       controller: IndexCtrl
     });
+    $routeProvider.when('/trends', {
+      templateUrl: 'partials/trends',
+      controller: IndexCtrl
+    });
     $routeProvider.when('/profile', {
         templateUrl: 'partials/profile/index',
         controller: ProfileCtrl

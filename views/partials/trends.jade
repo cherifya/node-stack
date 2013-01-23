@@ -1,0 +1,25 @@
+
+block page
+	div(class='container nav-padding')
+		div.row-fluid()
+			.span3
+				.well.gs-sidebar-nav
+					h4(class='gs-repos-count', ng-bind="filteredRepos.length + ' repos'", ng-show='filteredRepos.length != 0') stars
+
+					ul.nav.nav-list
+						li.nav-header Languages
+						li(ng-repeat='lang in languages', ng-class='{active: lang == activeLanguage}')
+							i(class='icon-remove-sign icon-white pull-right gs-clear-lang ', ng-show='lang == activeLanguage', ng-click="toggleLanguage()")
+							a(href='/stars', ng-click="toggleLanguage()", ng-bind='lang') Language
+
+
+
+			.span9
+				.hero-unit()
+					div
+						h1 Trends
+						p.
+							Have many Github Stars and it's getting difficult to make sense of it all? Hubstars will help you manage them.
+					
+
+	
