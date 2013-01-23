@@ -9,6 +9,10 @@ exports.index = function(req, res){
   res.render('index',{title:"Yo"});
 };
 
+exports.privacy = function(req, res){
+  res.render('privacy');
+};
+
 exports.partials = function (req, res) {
   var name = req.params.name;
   res.render('partials/' + name);
