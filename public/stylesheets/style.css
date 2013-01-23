@@ -1,0 +1,293 @@
+body {
+  //padding: 50px;
+  	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  	padding-bottom: 40px;
+    color: #5a5a5a;
+}
+
+footer {
+	margin-top: 30px;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.dropdown-menu a{
+}
+
+.user-avatar {
+	border: 1px solid gray;
+	width: 18px;
+	height: 18px;
+	margin-right: 5px;
+}
+
+.owner-avatar {
+	width: 24px;
+	height: 24px;
+	margin-right: 5px;
+}
+
+.nav-padding {
+	padding-top: 80px;
+}
+
+.gs-hidden {
+	visibility: hidden;
+}
+
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin-top: 0px;
+  margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+}
+.navbar-wrapper .navbar {
+
+}
+
+.navbar .nav li a.btn-auth {
+	line-height: 19px;
+	height: 19px;
+	text-shadow: none;
+	color: #333;
+}
+
+/* Remove border and change up box shadow for more contrast */
+.navbar .navbar-inner {
+  border: 0;
+  -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+     -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+          box-shadow: 0 2px 10px rgba(0,0,0,.25);
+}
+
+
+/* Downsize the brand/project name a bit */
+.navbar .brand {
+  padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+}
+
+/* Navbar links: increase padding for taller navbar */
+.navbar .nav > li > a {
+  padding: 15px 20px;
+}
+
+/* Offset the responsive button for proper vertical alignment */
+.navbar .btn-navbar {
+  margin-top: 10px;
+}
+
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  margin-bottom: 60px;
+}
+
+.carousel .container {
+  position: relative;
+  z-index: 9;
+}
+
+.carousel-control {
+  height: 80px;
+  margin-top: 0;
+  font-size: 120px;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+  background-color: transparent;
+  border: 0;
+}
+
+.carousel .item {
+  height: 500px;
+}
+.carousel img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+.carousel-caption {
+  background-color: transparent;
+  position: static;
+  max-width: 550px;
+  padding: 0 20px;
+  margin-top: 200px;
+}
+.carousel-caption h1,
+.carousel-caption .lead {
+  margin: 0;
+  line-height: 1.25;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0,0,0,.4);
+}
+.carousel-caption .btn {
+  margin-top: 10px;
+}
+
+h4.gs-repos-count {
+	margin: 0px;
+	margin-bottom: 10px;
+}
+
+.gs-sidebar-nav .nav-list {
+	padding-left: 0px;
+}
+
+.gs-filter-bar {
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #DDD;
+}
+
+.gs-filter-bar .gs-search-btn {
+	display: inline;
+}
+
+.gs-clear-search {
+	display: inline-block;
+	position: relative;
+	left: -34px;
+	top: 1px;
+	color: #AAA;
+	z-index: 12;
+}
+
+.gs-clear-lang {
+	position: relative;
+	top: 5px;
+}
+
+.gs-filter-bar .gs-sort-pills {
+	display: inline-block;
+	margin-bottom: 0px;
+}
+
+.gs-filter-bar .gs-sort-pills .nav-header {
+	padding: 7px 15px;
+}
+
+.gs-label {
+	margin-top: 10px;
+	margin-right: 5px;
+}
+
+.tags.editable-click.editable-empty {
+	font-style: italic;
+	color: #A2B0B6;
+	font-size: 10px;
+	line-height: 10px;
+	border-bottom: none;
+	text-shadow: none;
+	padding: 0px;
+	background-color: transparent;
+}
+
+ .tags.editable-click.editable-empty:hover {
+ 	font-style: italic;
+	font-size: 12px;
+	line-height: 12px;
+	text-shadow: none;
+	background-color: transparent;
+	color: #00B7FF;
+	padding: 0px;
+	border: none;
+	border-bottom: dashed 1px #08C;
+}
+
+.tags.editable-click,  .tags.editable-click:hover {
+	display: inline-block;
+	padding: 2px 4px;
+	font-size: 12px;
+	font-weight: bold;
+	line-height: 14px;
+	color: white;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	white-space: nowrap;
+	vertical-align: baseline;
+	//background-color: #3A87AD;
+	background-color: #B94A48;
+	//background-color: transparent;
+	border-radius: 3px;
+	border-bottom: none;
+}
+
+.tags.editable-click:hover {
+	border: 1px solid #333;
+
+}
+
+.gs-repo-tags {
+	margin-left: 39px;
+}
+
+.gs-apply-tags {
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+span.label.gs-watchers {
+	position: relative;
+	top: -2px;
+	margin-left: 10px;
+}
+
+.gs-repo h4 {
+	margin: 5px 0px;
+}
+
+.gs-repo a {
+	color: #005580;
+}
+
+.gs-repo-desc {
+	margin-left: 39px;
+}
+
+.gs-repo a:hover {
+	color: #00B7FF;
+}
+
+.gs-repo-extras {
+	font-weight: bold;
+	font-size: 11px;
+	padding: 5px;
+}
+
+.gs-unstar-btn {
+	display: block;
+	margin-top: 10px;
+	//top: 20px;
+}
+
+.gs-loading {
+	width: 24px;
+	height: 24px;
+	margin-left: 10px;
+	margin-right: auto;
+	text-align: center;
+	position: relative;
+	top: 4px;
+}
+
+.gs-updated-date {
+	font-size: 11px;
+	margin-left:  39px;
+}
+
+.gs-profile-editable  {
+	position: relative;
+	top: 5px;
+}

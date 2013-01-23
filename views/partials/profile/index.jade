@@ -1,0 +1,38 @@
+extends base
+
+block profile_page
+	div.span12
+		// Error alerts
+		div(class='alert', ng-show='warningText')
+			button(type='button', class='close', data-dismiss='alert') &times;
+			p.
+				{{warningText}}
+		div(class='alert alert-error', ng-show='errorText')
+			button(type='button', class='close', data-dismiss='alert') &times;
+			p.
+				{{errorText}}
+		div(class='alert alert-success', ng-show='successText')
+			button(type='button', class='close', data-dismiss='alert') &times;
+			p.
+				{{successText}}
+
+		// Profile fields	
+		div.well
+			
+			form.form-horizontal
+				div.control-group 
+					div.controls
+						img(src=currentUser.avatar_url, class='gs-profile-avatar')
+				div.control-group
+					label.control-label Name
+					div.controls
+						a(href="/profile", class='gs-profile-editable', profile-editable, id='name', data-pk="1", data-url="/api/user", data-original-title="Update name") #{currentUser.name}
+				div.control-group
+					label.control-label Email
+					div.controls
+						a(href="/profile", class='gs-profile-editable', profile-editable, id='email', data-pk="1", data-url="/api/user", data-original-title="Update email") #{currentUser.email}
+				div.control-group
+					div.controls
+						label.checkbox
+							input(type='checkbox', ng-model='receiveNews', ng-click='editUser')
+							| Receive newsletter

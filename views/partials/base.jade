@@ -1,0 +1,20 @@
+block page
+	div(class='container nav-padding')
+		if loggedIn
+			block content
+				div.row-fluid
+					div.span12
+						.well
+							p.
+								Page under construction... 
+							p.
+								Thanks for your patience
+		else
+			div.row-fluid
+				div.span12
+					.well
+						p.
+							Please log in first.
+
+
+	

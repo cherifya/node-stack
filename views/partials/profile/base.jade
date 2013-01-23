@@ -1,0 +1,20 @@
+extends ../base
+
+block content
+	div.row-fluid
+		.span3
+			.well.sidebar-nav
+				ul.nav.nav-list
+					li.nav-header:= currentUser.name
+					li: a(href='/profile') General
+					li: a(href='/profile/repos') Repositories
+
+		.span9
+			block profile_page
+				div.span12
+						.well
+							p.
+								Page under construction... 
+							p.
+								Thanks for your patience
+	

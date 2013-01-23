@@ -1,0 +1,95 @@
+block page
+	if !loggedIn
+		div(id='myCarousel', class='carousel slide')
+			div.carousel-inner
+				div(class='item active')
+					img(src='/images/carousel/slide1.jpeg')
+					div.container
+						div.carousel-caption
+							h1 Manage your Github stars
+							p.lead.
+								Have many Github Stars and it's getting difficult to make sense of it all? Hubstars will help you manage them.
+
+				div(class='item')
+					img(src='/images/carousel/slide2.jpeg')
+					div.container
+						div.carousel-caption
+							h1 Tags your stars
+							p.lead.
+								With easy tagging support, you can better organize your Github stars.
+				
+				div(class='item')
+					img(src='/images/carousel/slide3.jpeg')
+					div.container
+						div.carousel-caption
+							h1 Discover new repositories
+							p.lead.
+								Explore trending repositories on Github and find new gems to add to your stars.
+
+			a(class='left carousel-control', href='#myCarouel', target='_self', data-slide='prev') &lsaquo;
+			a(class='right carousel-control', href='#myCarouel', target='_self', data-slide='next') &rsaquo;
+
+
+		div.container
+			div.row-fluid
+				div.span4
+					h2	Better stars
+					p.
+						Have many Github Stars and it's getting difficult to make sense of it all? Hubstars will help you manage them.
+
+				div.span4
+					h2	Tagging
+					p.
+						With easy tagging support, searching and sorting, you can better organize your Github stars. And never miss anything anymore. 
+
+				div.span4
+					h2	Trends
+					p.
+						Explore trending repositories on Github and find new gems to add to your stars. Explore by languages and popularity.
+
+	else
+		div(class='container nav-padding')
+			div.row-fluid
+				.span3
+					.well.sidebar-nav
+						ul.nav.nav-list
+							li.nav-header:= currentUser.name
+							li: a(href='/stars') Stars
+							li: a(href='/trends') Trending
+							li.divider
+							li: a(href='/profile') Settings
+
+				.span9
+					div(ng-show='stars.length != 0')
+						h2
+							| Latest stars 
+							a(class='btn btn-primary', href="/stars") See more
+						// List of Stars
+						div(ng-repeat='star in stars | limitTo:5', class='row-fluid well well-small gs-repo')
+							.span9
+								h4
+									a(href='https://github.com/{{star.owner_login}}', target='_blank')
+										img(src='{{star.owner_avatar_url}}', class='owner-avatar img-polaroid', title='{{star.owner_login}}', boot-tooltip)
+									a(href='{{star.html_url}}', target='_blank') {{star.name}}
+									span(class='label label-warning gs-watchers')
+										i.icon-star.icon-white
+										|  {{star.watchers_count}}
+								p(class='muted gs-updated-date small')
+										| {{'Last updated ' + star.human_updated_at.fromNow()}}
+								p(class='gs-repo-desc'): small 	{{star.description}}
+								p
+									a(href="#", class='tags gs-repo-tags', tags-editable="", id='{{star.star_id}}', data-pk='{{star.star_id}}', data-url='/api/stars', data-original-title="add tags") {{star.tags}}
+							.span3
+								div(class='pull-right gs-repo-extras')
+									span {{star.language}}
+									button(class='btn btn-small gs-unstar-btn gs-hidden', href='#', ng-click='unstar()', data-loading-text="Loading...")
+										i.icon-star
+										|  Unstar
+						a(class='btn btn-primary', href="/stars") See all stars
+
+					.hero-unit(ng-show='stars.length == 0 && !loading')
+						div
+							h1:= currentUser.name
+							p.
+								Have many Github Stars and it's getting difficult to make sense of it all? Hubstars will help you manage them.
+

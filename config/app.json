@@ -1,0 +1,6 @@
+{
+    "port": "3001",
+    "passphrase": "afaee294bb5f4f9e7f8650ed718871df",
+    "logLevel" : "warn",
+    "sessiontimeout" : 1296000000
+}

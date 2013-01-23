@@ -1,0 +1,23 @@
+{
+    "name": "node-angular"
+  , "version": "0.0.1"
+  , "private": true
+  , "dependencies": {
+    "connect-redis" : "latest",
+    "express": ">= 3.x",
+    "htmlparser" : "latest",
+    "jade": ">= 0.0.1",
+    "ejs": ">= 0.0.1",
+    "nconf": ">= 0.5.1",
+    "everyauth": "latest",
+    "jugglingdb": "0.2.x",
+    "jugglingdb-redis": "latest",
+    "jugglingdb-mongodb": "latest",
+    "konphyg" : "latest",
+    "nodemailer" : "latest",
+    "request" : "latest",
+    "soupselect" : "latest",
+    "step" : "latest",
+    "tracer" : "latest"
+  }
+}
